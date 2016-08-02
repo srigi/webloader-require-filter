@@ -33,13 +33,21 @@ class RequireFilter
 	 */
 	public function __invoke($code, WebLoader\Compiler $loader, $file)
 	{
+		$ree = '~\\/~';
+
 		$root = $loader->getFileCollection()->getRoot();
-		$this->lilo->appendLoadPath($root);
+		$rootSegments = preg_split($ree, $root);
 
 		$pathInfo = pathinfo($file);
-		$fileName = $pathInfo['basename'];
-		$this->lilo->scan($fileName);
-		$fileDeps = $this->lilo->getFileChain($fileName);
+		$pathInfoSegments = preg_split($ree, $pathInfo['dirname']);
+
+		$fileRelativePath = array_diff($pathInfoSegments, $rootSegments);
+		$fileRelativePath[] = $pathInfo['basename'];
+		$fileRelativePath = join(DIRECTORY_SEPARATOR, $fileRelativePath);
+
+		$this->lilo->appendLoadPath($root);
+		$this->lilo->scan($fileRelativePath);
+		$fileDeps = $this->lilo->getFileChain($fileRelativePath);
 
 		$code = array_reduce($fileDeps, function($memo, $dep) {
 			return $memo . $dep['content'];
