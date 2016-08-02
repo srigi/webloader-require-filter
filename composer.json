@@ -1,5 +1,5 @@
 {
-	"name": "srigi/webloader-request-filter",
+	"name": "srigi/webloader-require-filter",
 	"description": "Sprockets directive plugin (filter) for janmarek/webloader",
 	"type": "plugin",
 	"license": "MIT",
