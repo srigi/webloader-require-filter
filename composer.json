@@ -1,5 +1,6 @@
 {
 	"name": "srigi/webloader-request-filter",
+	"description": "Sprockets directive plugin (filter) for janmarek/webloader",
 	"type": "plugin",
 	"license": "MIT",
 	"authors": [
@@ -14,6 +15,7 @@
 		]
 	},
 	"require": {
+		"php": ">= 5.3"
 	},
 	"require-dev": {
 		"nette/tester": "^1.6.1"
