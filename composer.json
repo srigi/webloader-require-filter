@@ -1,0 +1,21 @@
+{
+	"name": "srigi/webloader-request-filter",
+	"type": "plugin",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Igor Hlina",
+			"email": "srigi@srigi.sk"
+		}
+	],
+	"autoload": {
+		"classmap": [
+			"src/"
+		]
+	},
+	"require": {
+	},
+	"require-dev": {
+		"nette/tester": "^1.6.1"
+	}
+}
