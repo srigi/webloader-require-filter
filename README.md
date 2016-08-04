@@ -1,5 +1,9 @@
 # srigi/webloader-require-filter
 
+[![Build Status](https://api.travis-ci.org/srigi/webloader-require-filter.svg?branch=master&style=flat)](https://travis-ci.org/srigi/webloader-require-filter)
+[![Latest Stable Version](https://img.shields.io/packagist/v/srigi/webloader-require-filter.svg?style=flat)](https://packagist.org/packages/srigi/webloader-require-filter)
+[![Composer Downloads](https://img.shields.io/packagist/dt/srigi/webloader-require-filter.svg?style=flat)](https://packagist.org/packages/srigi/webloader-require-filter)
+
 This is a plugin for [janmarek/webloader](https://github.com/janmarek/webloader) which adds availability to interpret sprockets directives in you Javascript and Coffeescript files. It is based on [rafacgarciaa/php-lilo](https://github.com/rafacgarciaa/php-lilo).
 
 Lilo is a fast engine that allow you scan a file to extract a dependency graph using a subset of Sprockets directives. Following directives are supported:
@@ -67,5 +71,5 @@ By default **webloader-require-filter** works with Javascript files. You can als
 Currently **webloader-require-filter** seach dependencies in `sourceDir` of the processed file. Don't forget to setup `sourceDir` in your webloader configuration!
 
 ## Credits
-- [Lilo](https://github.com/rafacgarciaa/php-lilo), a file concatenation tool for PHP inspired by Sprockets and based in Snockets
+- [Lilo](https://github.com/rafacgarciaa/php-lilo), a file concatenation tool for PHP inspired by Sprockets
 - [Sprockets](https://github.com/rails/sprockets), Rack-based asset packaging system
